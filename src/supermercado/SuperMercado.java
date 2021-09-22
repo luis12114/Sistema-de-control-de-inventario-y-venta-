@@ -1,4 +1,3 @@
-
 package supermercado;
 
 import java.net.URI;
@@ -14,7 +13,7 @@ public class SuperMercado extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-       URI uri = Paths.get("src/Vistas/").toAbsolutePath().toUri();
+       URI uri = Paths.get("src/Views/Home.fxml").toAbsolutePath().toUri();
         
         System.out.println("URI"+ uri.toString());
         Parent root = FXMLLoader.load(uri.toURL());
