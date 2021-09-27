@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Controller;
 
 import java.io.IOException;
@@ -14,62 +19,27 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class HomeController implements Initializable {
 
-    @FXML
-    private Button btnRegistro;
-
-    @FXML
-    private Button btnLogin;
-
+public class MenuController implements Initializable {
+   @FXML
+   private Button btnSalir;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        
     }
 
     @FXML
-    private void btnLoginOnAction(ActionEvent event) {
-        try {
+    private void btnSalirOnAction(ActionEvent event) {
+      try {
             // Cargo la vista
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/Menu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/Home.fxml"));
 
             // Cargo el padre
             Parent root = loader.load();
 
             // Obtengo el controlador
-            MenuController controlador = loader.getController();
-
-            // Creo la scene y el stage
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-
-            // Asocio el stage con el scene
-            stage.setScene(scene);
-            stage.show();
-
-            //Indico que debe hacer al cerrar
-            stage.setOnCloseRequest(e -> controlador.closeWindows());
-
-            // Ciero la ventana donde estoy
-            Stage myStage = (Stage) this.btnLogin.getScene().getWindow();
-            myStage.close();
-
-        } catch (IOException ex) {
-            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    @FXML
-    private void btnRegistroOnAction(ActionEvent event) {
-        try {
-            // Cargo la vista
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/Register.fxml"));
-
-            // Cargo el padre
-            Parent root = loader.load();
-
-            // Obtengo el controlador
-            RegisterController controlador = loader.getController();
+            HomeController controlador = loader.getController();
 
             // Creo la scene y el stage
             Scene scene = new Scene(root);
@@ -80,15 +50,35 @@ public class HomeController implements Initializable {
             stage.show();
 
             // Indico que debe hacer al cerrar
-            stage.setOnCloseRequest(e -> controlador.closeWindows());
+            //stage.setOnCloseRequest(e -> controlador.closeWindows());
 
             // Ciero la ventana donde estoy
-            Stage myStage = (Stage) this.btnRegistro.getScene().getWindow();
+            Stage myStage = (Stage) this.btnSalir.getScene().getWindow();
+            myStage.close();
+
+        } catch (IOException ex) {
+            Logger.getLogger(MenuController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }    
+    
+    public void closeWindows() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/Home.fxml"));
+
+            Parent root = loader.load();
+
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+
+            stage.setScene(scene);
+            stage.show();
+
+            Stage myStage = (Stage) this.btnSalir.getScene().getWindow();
             myStage.close();
 
         } catch (IOException ex) {
             Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    
 }

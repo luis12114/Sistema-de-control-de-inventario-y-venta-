@@ -25,6 +25,8 @@ public class RegisterController implements Initializable {
         
     } 
     
+   
+    /*Manejo de ventanas*/
     @FXML
     private void btnIniciarSesionOnAction(ActionEvent event) {
        try {
@@ -53,7 +55,6 @@ public class RegisterController implements Initializable {
             Logger.getLogger(RegisterController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
     
     public void closeWindows() {
 

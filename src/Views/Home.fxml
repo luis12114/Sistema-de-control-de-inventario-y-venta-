@@ -29,6 +29,11 @@
                   <Font size="14.0" />
                </font>
             </Label>
+            <Button fx:id="btnLogin" layoutX="130.0" layoutY="355.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="41.0" prefWidth="172.0" style="-fx-background-color: white; -fx-border-color: none;" text="Iniciar Sesión" textFill="#5686e7">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>
