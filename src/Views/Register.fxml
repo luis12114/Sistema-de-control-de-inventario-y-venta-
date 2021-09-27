@@ -8,7 +8,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="579.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RegisterController">
    <children>
-      <AnchorPane layoutY="-3.0" prefHeight="579.0" prefWidth="307.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="551.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutY="-3.0" prefHeight="579.0" prefWidth="307.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button fx:id="btnIniciarSesion" layoutX="63.0" layoutY="365.0" mnemonicParsing="false" onAction="#btnIniciarSesionOnAction" prefHeight="39.0" prefWidth="176.0" style="-fx-background-color: #5686E7; -fx-border-radius: 50px;" text="Inicar Sesión" textFill="WHITE">
                <font>
@@ -30,7 +30,7 @@
             </Text>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="395.0" layoutY="36.0" prefHeight="579.0" prefWidth="552.0" style="-fx-background-color: #5686E7;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="395.0" layoutY="36.0" prefHeight="579.0" prefWidth="552.0" style="-fx-background-color: #5686E7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Text fill="WHITE" layoutX="137.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Usuario" textAlignment="CENTER" wrappingWidth="326.17578125">
                <font>

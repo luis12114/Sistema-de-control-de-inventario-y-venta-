@@ -9,8 +9,8 @@
 
 <AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="796.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeController">
    <children>
-      <AnchorPane prefHeight="555.0" prefWidth="385.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane layoutX="385.0" prefHeight="555.0" prefWidth="411.0" style="-fx-background-color: #5686E7;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="555.0" prefWidth="385.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="410.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutX="385.0" prefHeight="555.0" prefWidth="411.0" style="-fx-background-color: #5686E7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <TextField layoutX="58.0" layoutY="224.0" prefHeight="33.0" prefWidth="304.0" />
             <TextField layoutX="59.0" layoutY="294.0" prefHeight="33.0" prefWidth="304.0" />
