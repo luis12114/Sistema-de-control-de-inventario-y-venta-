@@ -26,7 +26,7 @@ public class RegisterController implements Initializable {
     } 
     
    
-    /*Manejo de ventanas*/
+    /*Botones para Cerrar ventana*/
     @FXML
     private void btnIniciarSesionOnAction(ActionEvent event) {
        try {

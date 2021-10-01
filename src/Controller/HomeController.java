@@ -21,12 +21,16 @@ public class HomeController implements Initializable {
 
     @FXML
     private Button btnLogin;
+    
+    
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
     }
-
+    
+    
+    /*Boton de login*/
     @FXML
     private void btnLoginOnAction(ActionEvent event) {
         try {
@@ -59,6 +63,7 @@ public class HomeController implements Initializable {
         }
     }
 
+    /*Boton de registrar*/
     @FXML
     private void btnRegistroOnAction(ActionEvent event) {
         try {
@@ -90,5 +95,7 @@ public class HomeController implements Initializable {
             Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    
 
 }

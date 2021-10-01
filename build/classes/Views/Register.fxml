@@ -2,15 +2,16 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="579.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RegisterController">
    <children>
-      <AnchorPane layoutY="-3.0" prefHeight="579.0" prefWidth="307.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="2.0" prefHeight="579.0" prefWidth="268.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="588.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="btnIniciarSesion" layoutX="63.0" layoutY="365.0" mnemonicParsing="false" onAction="#btnIniciarSesionOnAction" prefHeight="39.0" prefWidth="176.0" style="-fx-background-color: #5686E7; -fx-border-radius: 50px;" text="Inicar Sesión" textFill="WHITE">
+            <Button fx:id="btnIniciarSesion" layoutX="47.0" layoutY="399.0" mnemonicParsing="false" onAction="#btnIniciarSesionOnAction" prefHeight="39.0" prefWidth="176.0" style="-fx-background-color: #5686E7; -fx-border-radius: 50px;" text="Soy miembro" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -18,25 +19,55 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Text fill="#5686e7" layoutX="35.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titulo" textAlignment="CENTER" wrappingWidth="232.17578125">
+            <Text fill="#5686e7" layoutX="52.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro" textAlignment="CENTER" wrappingWidth="166.17578125">
                <font>
                   <Font name="System Bold" size="33.0" />
-               </font>
-            </Text>
-            <Text fill="#5686e7" layoutX="37.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Texto informativo Texto informativo" textAlignment="CENTER" wrappingWidth="232.17578125">
-               <font>
-                  <Font size="23.0" />
                </font>
             </Text>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="395.0" layoutY="36.0" prefHeight="579.0" prefWidth="552.0" style="-fx-background-color: #5686E7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Text fill="WHITE" layoutX="137.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Usuario" textAlignment="CENTER" wrappingWidth="326.17578125">
+            <Text fill="WHITE" layoutX="139.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Usuario" textAlignment="CENTER" wrappingWidth="326.17578125">
                <font>
                   <Font name="System Bold" size="33.0" />
                </font>
             </Text>
+            <TextField layoutX="31.0" layoutY="145.0" prefHeight="29.0" prefWidth="232.0" />
+            <TextField layoutX="294.0" layoutY="145.0" prefHeight="29.0" prefWidth="232.0" />
+            <Text fill="WHITE" layoutX="31.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" textAlignment="CENTER" wrappingWidth="83.17578125">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="294.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos" textAlignment="CENTER" wrappingWidth="95.17578125">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <TextField layoutX="33.0" layoutY="324.0" prefHeight="29.0" prefWidth="496.0" />
+            <Text fill="WHITE" layoutX="33.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo" textAlignment="CENTER" wrappingWidth="73.17578125">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="34.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" textAlignment="CENTER" wrappingWidth="118.17578125">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <TextField layoutX="34.0" layoutY="423.0" prefHeight="29.0" prefWidth="496.0" />
+            <Text fill="WHITE" layoutX="33.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de usuario" textAlignment="CENTER" wrappingWidth="190.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <TextField layoutX="34.0" layoutY="229.0" prefHeight="29.0" prefWidth="496.0" />
+            <Button layoutX="39.0" layoutY="498.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="176.0" style="-fx-background-color: white;" text="Registrar" textFill="#5686e7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

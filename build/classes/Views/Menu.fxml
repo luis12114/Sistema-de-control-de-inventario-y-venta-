@@ -9,17 +9,37 @@
    <children>
       <AnchorPane layoutX="2.0" layoutY="-1.0" prefHeight="528.0" prefWidth="264.0" style="-fx-background-color: #5686e7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="btnSalir" layoutX="42.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: none;" text="Salir" textFill="WHITE">
+            <Button fx:id="btnSalir" layoutX="74.0" layoutY="398.0" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: none;" text="Salir" textFill="WHITE" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="398.0">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Text fill="WHITE" layoutX="96.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu ">
+            <Text fill="WHITE" layoutX="87.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu ">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font name="System Bold" size="30.0" />
                </font>
             </Text>
+            <Button fx:id="btnProductos" layoutX="61.0" layoutY="146.0" mnemonicParsing="false" onAction="#btnProductosOnAction" prefHeight="45.0" prefWidth="142.0" style="-fx-background-color: none;" text="Productos" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnVenta" layoutX="71.0" layoutY="229.0" mnemonicParsing="false" onAction="#btnVentaOnAction" prefHeight="45.0" prefWidth="90.0" style="-fx-background-color: none;" text="Venta" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnGraficas" layoutX="77.0" layoutY="316.0" mnemonicParsing="false" onAction="#btnGraficasOnAction" style="-fx-background-color: none;" text="Graficas" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
+      <Text fill="#5686e7" layoutX="433.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Panel Administrativo" wrappingWidth="321.0">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
