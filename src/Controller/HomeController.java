@@ -97,5 +97,25 @@ public class HomeController implements Initializable {
     }
     
     
+    
+    /*Botones para Cerrar ventana*/
+    public void closeWindows() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/Home.fxml"));
 
+            Parent root = loader.load();
+
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+
+            stage.setScene(scene);
+            stage.show();
+
+            Stage myStage = (Stage) this.btnLogin.getScene().getWindow();
+            myStage.close();
+
+        } catch (IOException ex) {
+            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

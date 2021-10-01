@@ -59,8 +59,8 @@ public class MenuController implements Initializable {
             stage.show();
 
             // Indico que debe hacer al cerrar
-            //stage.setOnCloseRequest(e -> controlador.closeWindows());
-            // Ciero la ventana donde estoy
+            stage.setOnCloseRequest(e -> controlador.closeWindows());
+            //Ciero la ventana donde estoy
             Stage myStage = (Stage) this.btnProductos.getScene().getWindow();
             myStage.close();
 
@@ -102,8 +102,8 @@ public class MenuController implements Initializable {
             stage.show();
 
             // Indico que debe hacer al cerrar
-            //stage.setOnCloseRequest(e -> controlador.closeWindows());
-            // Ciero la ventana donde estoy
+            stage.setOnCloseRequest(e -> controlador.closeWindows());
+            //Ciero la ventana donde estoy
             Stage myStage = (Stage) this.btnSalir.getScene().getWindow();
             myStage.close();
 
