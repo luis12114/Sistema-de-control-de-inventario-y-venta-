@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="633.0" prefWidth="945.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.VentanaController">
+   <children>
+      <AnchorPane layoutY="5.0" prefHeight="598.0" prefWidth="321.0" style="-fx-background-color: white; -fx-border-color: gray;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="1.0" layoutY="-2.0" prefHeight="60.0" prefWidth="318.0" style="-fx-background-color: #5686e7;" AnchorPane.bottomAnchor="577.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0">
+               <children>
+                  <Text fill="WHITE" layoutX="36.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Formulario de Venta">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Text fill="#5686e7" layoutX="27.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del producto">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <TextField layoutX="22.0" layoutY="174.0" prefHeight="27.0" prefWidth="273.0" />
+            <Text fill="#5686e7" layoutX="29.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <TextField layoutX="24.0" layoutY="260.0" prefHeight="27.0" prefWidth="273.0" />
+            <Text fill="#5686e7" layoutX="31.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio x Unidad">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <TextField layoutX="29.0" layoutY="359.0" prefHeight="27.0" prefWidth="273.0" />
+            <Text fill="#5686e7" layoutX="34.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <TextField layoutX="29.0" layoutY="445.0" prefHeight="27.0" prefWidth="273.0" />
+            <Button fx:id="btnVolver" layoutX="91.0" layoutY="582.0" mnemonicParsing="false" onAction="#btnVolverOnAction" style="-fx-background-color: #5686e7;" text="Volver  al menu" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="616.0" layoutY="8.0" prefHeight="57.0" prefWidth="622.0" style="-fx-background-color: #5686e7;" AnchorPane.bottomAnchor="576.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="268.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ventas">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TableView layoutX="326.0" layoutY="57.0" prefHeight="577.0" prefWidth="622.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Id" />
+          <TableColumn prefWidth="152.0" text="Producto" />
+            <TableColumn prefWidth="158.0" text="Cantidad" />
+            <TableColumn prefWidth="130.0" text="Precio x Unidad" />
+            <TableColumn prefWidth="106.0" text="Precio Total" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
