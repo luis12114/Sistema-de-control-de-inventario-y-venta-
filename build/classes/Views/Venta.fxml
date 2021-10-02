@@ -21,33 +21,43 @@
                   </Text>
                </children>
             </AnchorPane>
-            <Text fill="#5686e7" layoutX="27.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del producto">
+            <Text fill="#5686e7" layoutX="29.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del producto">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
-            <TextField layoutX="22.0" layoutY="174.0" prefHeight="27.0" prefWidth="273.0" />
-            <Text fill="#5686e7" layoutX="29.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad">
+            <TextField layoutX="24.0" layoutY="131.0" prefHeight="27.0" prefWidth="273.0" />
+            <Text fill="#5686e7" layoutX="33.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
-            <TextField layoutX="24.0" layoutY="260.0" prefHeight="27.0" prefWidth="273.0" />
-            <Text fill="#5686e7" layoutX="31.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio x Unidad">
+            <TextField layoutX="28.0" layoutY="215.0" prefHeight="27.0" prefWidth="273.0" />
+            <Text fill="#5686e7" layoutX="30.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio x Unidad">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
-            <TextField layoutX="29.0" layoutY="359.0" prefHeight="27.0" prefWidth="273.0" />
-            <Text fill="#5686e7" layoutX="34.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total">
+            <TextField layoutX="28.0" layoutY="319.0" prefHeight="27.0" prefWidth="273.0" />
+            <Text fill="#5686e7" layoutX="34.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
-            <TextField layoutX="29.0" layoutY="445.0" prefHeight="27.0" prefWidth="273.0" />
-            <Button fx:id="btnVolver" layoutX="91.0" layoutY="582.0" mnemonicParsing="false" onAction="#btnVolverOnAction" style="-fx-background-color: #5686e7;" text="Volver  al menu" textFill="WHITE">
+            <TextField layoutX="29.0" layoutY="408.0" prefHeight="27.0" prefWidth="273.0" />
+            <Button fx:id="btnVolver" layoutX="91.0" layoutY="582.0" mnemonicParsing="false" onAction="#btnVolverOnAction" style="-fx-background-color: #5686e7;" text="Volver  al menu" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <font>
                   <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="183.0" layoutY="486.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="118.0" style="-fx-background-color: red;" text="Cancelar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="23.0" layoutY="486.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" style="-fx-background-color: #5686e7;" text="Imprimir recibo" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
                </font>
             </Button>
          </children>
