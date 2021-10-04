@@ -1,5 +1,9 @@
 package Controller;
 
+import Dao.UsuarioDao;
+import Models.Usuarios;
+import java.io.File;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -11,8 +15,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.StageStyle;
 
 public class HomeController implements Initializable {
 
@@ -21,51 +31,91 @@ public class HomeController implements Initializable {
 
     @FXML
     private Button btnLogin;
+
+    
+    @FXML
+    private TextField textUserName;
+
+    @FXML
+    private PasswordField textConstrseña;
     
     
+    @FXML
+    private ImageView ImageLogo;
+
+    
+
+    private UsuarioDao usuarioDao;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        this.usuarioDao = new UsuarioDao();
+        
+        /*File file = new File("scr/Images/buyCard.png");
+        Image image = new Image(file.toURI().toString());
+        ImageLogo.setImage(image);*/
     }
     
     
+
     /*Boton de login*/
     @FXML
     private void btnLoginOnAction(ActionEvent event) {
-        try {
-            // Cargo la vista
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/Menu.fxml"));
+        String usuario = textUserName.getText();
+        String constraseña = textConstrseña.getText();
+        boolean rsp = this.usuarioDao.Login(usuario, constraseña);
+        if (rsp) {
 
-            // Cargo el padre
-            Parent root = loader.load();
+            try {
+                // Cargo la vista
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/Menu.fxml"));
 
-            // Obtengo el controlador
-            MenuController controlador = loader.getController();
+                // Cargo el padre
+                Parent root = loader.load();
 
-            // Creo la scene y el stage
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
+                // Obtengo el controlador
+                MenuController controlador = loader.getController();
 
-            // Asocio el stage con el scene
-            stage.setScene(scene);
-            stage.show();
+                // Creo la scene y el stage
+                Scene scene = new Scene(root);
+                Stage stage = new Stage();
 
-            //Indico que debe hacer al cerrar
-            stage.setOnCloseRequest(e -> controlador.closeWindows());
+                // Asocio el stage con el scene
+                stage.setScene(scene);
+                stage.show();
 
-            // Ciero la ventana donde estoy
-            Stage myStage = (Stage) this.btnLogin.getScene().getWindow();
-            myStage.close();
+                //Indico que debe hacer al cerrar
+                stage.setOnCloseRequest(e -> controlador.closeWindows());
 
-        } catch (IOException ex) {
-            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
+                // Ciero la ventana donde estoy
+                Stage myStage = (Stage) this.btnLogin.getScene().getWindow();
+                myStage.close();
+
+            } catch (IOException ex) {
+                Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        } else {
+            Alert alerta = new Alert(Alert.AlertType.ERROR);
+            alerta.setTitle("Error");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Usuario o Contraseña incorrectos");
+            alerta.initStyle(StageStyle.UTILITY);
+            alerta.showAndWait();
+            limpiarCampos();
         }
+
     }
 
+    /*Limpiar Campos*/
+    private void limpiarCampos() {
+        textUserName.setText("");
+        textConstrseña.setText("");
+    }
     /*Boton de registrar*/
     @FXML
     private void btnRegistroOnAction(ActionEvent event) {
+
         try {
             // Cargo la vista
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/Register.fxml"));
@@ -95,9 +145,7 @@ public class HomeController implements Initializable {
             Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    
-    
+
     /*Botones para Cerrar ventana*/
     public void closeWindows() {
         try {
