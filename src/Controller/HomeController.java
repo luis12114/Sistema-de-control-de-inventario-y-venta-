@@ -32,37 +32,32 @@ public class HomeController implements Initializable {
     @FXML
     private Button btnLogin;
 
-    
     @FXML
     private TextField textUserName;
 
     @FXML
     private PasswordField textConstrseña;
-    
-    
+
     @FXML
     private ImageView ImageLogo;
-
-    
 
     private UsuarioDao usuarioDao;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         this.usuarioDao = new UsuarioDao();
-        
+
         /*File file = new File("scr/Images/buyCard.png");
         Image image = new Image(file.toURI().toString());
         ImageLogo.setImage(image);*/
     }
-    
-    
 
     /*Boton de login*/
     @FXML
     private void btnLoginOnAction(ActionEvent event) {
         String usuario = textUserName.getText();
         String constraseña = textConstrseña.getText();
+
         boolean rsp = this.usuarioDao.Login(usuario, constraseña);
         if (rsp) {
 
@@ -96,13 +91,30 @@ public class HomeController implements Initializable {
             }
 
         } else {
-            Alert alerta = new Alert(Alert.AlertType.ERROR);
-            alerta.setTitle("Error");
-            alerta.setHeaderText(null);
-            alerta.setContentText("Usuario o Contraseña incorrectos");
-            alerta.initStyle(StageStyle.UTILITY);
-            alerta.showAndWait();
-            limpiarCampos();
+            if (usuario == null ||"".equals(usuario)) {
+                Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+                alerta.setTitle("Alerta");
+                alerta.setHeaderText(null);
+                alerta.setContentText("Ingrese tu usario");
+                alerta.initStyle(StageStyle.UTILITY);
+                alerta.showAndWait();
+            } else if ("".equals(constraseña) || constraseña == null) {
+                Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+                alerta.setTitle("Alerta");
+                alerta.setHeaderText(null);
+                alerta.setContentText("Ingrese tu contraseña");
+                alerta.initStyle(StageStyle.UTILITY);
+                alerta.showAndWait();
+            } 
+            else if(usuario!=null && constraseña!=null){
+                Alert alerta = new Alert(Alert.AlertType.ERROR);
+                alerta.setTitle("Error");
+                alerta.setHeaderText(null);
+                alerta.setContentText("Usuario o Contraseña incorrectos");
+                alerta.initStyle(StageStyle.UTILITY);
+                alerta.showAndWait();
+                limpiarCampos();
+            }
         }
 
     }
@@ -112,6 +124,7 @@ public class HomeController implements Initializable {
         textUserName.setText("");
         textConstrseña.setText("");
     }
+
     /*Boton de registrar*/
     @FXML
     private void btnRegistroOnAction(ActionEvent event) {

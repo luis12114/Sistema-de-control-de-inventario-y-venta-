@@ -12,13 +12,18 @@
 
 <AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="796.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeController">
    <children>
-      <AnchorPane prefHeight="555.0" prefWidth="385.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="410.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="555.0" prefWidth="381.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="415.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fx:id="ImageLogo" fitHeight="173.0" fitWidth="199.0" layoutX="93.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="ImageLogo" fitHeight="194.0" fitWidth="194.0" layoutX="84.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Images/buyCard.png" />
                </image>
             </ImageView>
+            <Text fill="#5686e7" layoutX="10.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Super mercado" textAlignment="CENTER" wrappingWidth="362.0">
+               <font>
+                  <Font name="System Bold" size="43.0" />
+               </font>
+            </Text>
          </children></AnchorPane>
       <AnchorPane layoutX="385.0" prefHeight="555.0" prefWidth="411.0" style="-fx-background-color: #5686E7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
