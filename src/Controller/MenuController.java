@@ -30,6 +30,9 @@ public class MenuController implements Initializable {
     private Button btnVenta;
     @FXML
     private Button btnGraficas;
+    
+    @FXML
+    private Button btnUsuarios;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -128,6 +131,11 @@ public class MenuController implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    @FXML
+    private void btnUsuariosOnAction(ActionEvent event) {
+        System.out.println("Usuarios"); 
     }
 
     /*Botones para Cerrar ventana*/
