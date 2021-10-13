@@ -30,7 +30,7 @@ public class MenuController implements Initializable {
     private Button btnVenta;
     @FXML
     private Button btnGraficas;
-    
+
     @FXML
     private Button btnUsuarios;
 
@@ -125,17 +125,43 @@ public class MenuController implements Initializable {
             // Indico que debe hacer al cerrar
             stage.setOnCloseRequest(e -> controlador.closeWindows());
             //Ciero la ventana donde estoy
-            Stage myStage = (Stage) this. btnGraficas.getScene().getWindow();
+            Stage myStage = (Stage) this.btnGraficas.getScene().getWindow();
             myStage.close();
 
         } catch (IOException ex) {
             Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
     @FXML
     private void btnUsuariosOnAction(ActionEvent event) {
-        System.out.println("Usuarios"); 
+        try {
+            // Cargo la vista
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/Usuarios.fxml"));
+
+            // Cargo el padre
+            Parent root = loader.load();
+
+            // Obtengo el controlador
+            UsuariosController controlador = loader.getController();
+
+            // Creo la scene y el stage
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+
+            // Asocio el stage con el scene
+            stage.setScene(scene);
+            stage.show();
+
+            //Indico que debe hacer al cerrar
+            stage.setOnCloseRequest(e -> controlador.closeWindows());
+            //Ciero la ventana donde estoy
+            Stage myStage = (Stage) this.btnUsuarios.getScene().getWindow();
+            myStage.close();
+
+        } catch (IOException ex) {
+            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /*Botones para Cerrar ventana*/

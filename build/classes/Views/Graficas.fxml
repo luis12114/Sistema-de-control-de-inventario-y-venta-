@@ -41,11 +41,6 @@
                   <Font name="System Bold" size="21.0" />
                </font>
             </Text>
-            <Button fx:id="btnVolver" layoutY="537.0" mnemonicParsing="false" onAction="#btnVolverOnAction" prefHeight="38.0" prefWidth="301.0" style="-fx-background-color: white;" text="Volver  al menu" textFill="#5686e7" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0">
-               <font>
-                  <Font name="System Bold" size="17.0" />
-               </font>
-            </Button>
             <Button layoutX="167.0" layoutY="468.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="118.0" style="-fx-background-color: red;" text="Cancelar" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
@@ -58,6 +53,11 @@
             </Button>
          </children>
       </AnchorPane>
-      <PieChart layoutX="312.0" layoutY="8.0" prefHeight="560.0" prefWidth="677.0" style="-fx-background-color: white; -fx-border-color: gray;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="303.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <PieChart layoutX="334.0" layoutY="28.0" prefHeight="486.0" prefWidth="638.0" style="-fx-background-color: white; -fx-border-color: gray;" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="334.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="28.0" />
+      <Button fx:id="btnVolver" layoutX="802.0" layoutY="533.0" mnemonicParsing="false" onAction="#btnVolverOnAction" prefHeight="39.0" prefWidth="175.0" style="-fx-background-color: #5686e7;" text="Volver  al menu" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

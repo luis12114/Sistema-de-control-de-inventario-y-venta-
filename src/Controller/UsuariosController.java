@@ -14,22 +14,22 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class GraficasController implements Initializable {
+public class UsuariosController implements Initializable {
 
-    
     @FXML
     private Button btnVolver;
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
     }
     
+    
 
     /*Botones para Cerrar ventana*/
     @FXML
     private void btnVolverOnAction(ActionEvent event) {
-       try {
+        try {
             // Cargo la vista
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/Menu.fxml"));
 
@@ -54,10 +54,10 @@ public class GraficasController implements Initializable {
             myStage.close();
 
         } catch (IOException ex) {
-            Logger.getLogger( GraficasController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UsuariosController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
     public void closeWindows() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/Menu.fxml"));
@@ -70,8 +70,8 @@ public class GraficasController implements Initializable {
             stage.setScene(scene);
             stage.show();
 
-           Stage myStage = (Stage) this.btnVolver.getScene().getWindow();
-           myStage.close();
+            Stage myStage = (Stage) this.btnVolver.getScene().getWindow();
+            myStage.close();
         } catch (IOException ex) {
             Logger.getLogger(MenuController.class.getName()).log(Level.SEVERE, null, ex);
         }
