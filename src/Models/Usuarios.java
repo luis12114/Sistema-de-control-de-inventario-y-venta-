@@ -1,7 +1,7 @@
 package Models;
 
 public class Usuarios {
-
+    private int id;
     private String nombre;
     private String apellido;
     private String usario;
@@ -10,9 +10,16 @@ public class Usuarios {
 
     public Usuarios() {
     }
-    
-    
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+ 
     public String getNombre() {
         return nombre;
     }
@@ -52,6 +59,9 @@ public class Usuarios {
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Usuarios{" + "nombre=" + nombre + ", apellido=" + apellido + ", usario=" + usario + ", correo=" + correo + ", contrase\u00f1a=" + contraseña + '}';
+    }
 }

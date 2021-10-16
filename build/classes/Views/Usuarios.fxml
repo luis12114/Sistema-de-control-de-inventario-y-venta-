@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -17,58 +17,49 @@
                   <Font name="System Bold" size="27.0" />
                </font>
             </Text>
-            <TextField layoutX="30.0" layoutY="106.0" prefHeight="27.0" prefWidth="295.0" />
+            <TextField fx:id="txtNombre" layoutX="30.0" layoutY="106.0" prefHeight="27.0" prefWidth="295.0" promptText="Ingresa tu nombre" />
             <Text fill="WHITE" layoutX="138.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Text>
-            <TextField layoutX="31.0" layoutY="195.0" prefHeight="27.0" prefWidth="295.0" />
+            <TextField fx:id="txtApellidos" layoutX="31.0" layoutY="195.0" prefHeight="27.0" prefWidth="295.0" promptText="Ingresa tu apellido" />
             <Text fill="WHITE" layoutX="126.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Text>
-            <TextField layoutX="31.0" layoutY="283.0" prefHeight="27.0" prefWidth="295.0" />
+            <TextField fx:id="txtUserName" layoutX="31.0" layoutY="283.0" prefHeight="27.0" prefWidth="295.0" promptText="Ingresa tu usuario" />
             <Text fill="WHITE" layoutX="83.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de usuario">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Text>
-            <TextField layoutX="29.0" layoutY="374.0" prefHeight="27.0" prefWidth="295.0" />
+            <TextField fx:id="txtCorreo" layoutX="29.0" layoutY="374.0" prefHeight="27.0" prefWidth="295.0" promptText="Ingresa tu correo" />
             <Text fill="WHITE" layoutX="136.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Text>
-            <TextField layoutX="31.0" layoutY="467.0" prefHeight="27.0" prefWidth="295.0" />
             <Text fill="WHITE" layoutX="117.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Text>
-            <Button layoutX="42.0" layoutY="525.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="120.0" style="-fx-background-color: white;" text="Guardar" textAlignment="CENTER" textFill="#5686e7">
+            <Button fx:id="btnGuardar" layoutX="42.0" layoutY="525.0" mnemonicParsing="false" onAction="#btnGuardarOnAction" prefHeight="36.0" prefWidth="120.0" style="-fx-background-color: white;" text="Guardar" textAlignment="CENTER" textFill="#5686e7">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Button>
-            <Button layoutX="186.0" layoutY="525.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="120.0" style="-fx-background-color: red;" text="Cancelar" textAlignment="CENTER" textFill="#fcfcfc">
+            <Button fx:id="btnCancelar" disable="true" layoutX="186.0" layoutY="525.0" mnemonicParsing="false" onAction="#btnCancelarOnAction" prefHeight="36.0" prefWidth="120.0" style="-fx-background-color: red;" text="Cancelar" textAlignment="CENTER" textFill="#fcfcfc">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Button>
+            <PasswordField fx:id="passConstraseña" layoutX="32.0" layoutY="467.0" prefHeight="27.0" prefWidth="289.0" promptText="Ingresa tu contraseña" />
          </children>
       </AnchorPane>
-      <TableView layoutX="379.0" layoutY="24.0" prefHeight="572.0" prefWidth="705.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="379.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="26.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="Id" />
-          <TableColumn prefWidth="94.0" text="Nombre" />
-            <TableColumn prefWidth="129.0" text="Apellidos" />
-            <TableColumn prefWidth="129.0" text="Nombre de usuario" />
-            <TableColumn prefWidth="110.0" text="Correo" />
-            <TableColumn prefWidth="135.0" text="Constraseña" />
-        </columns>
-      </TableView>
+      <TableView fx:id="tvUsuarios" layoutX="370.0" layoutY="19.0" prefHeight="579.0" prefWidth="714.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="19.0" />
       <Button fx:id="btnVolver" layoutX="935.0" layoutY="614.0" mnemonicParsing="false" onAction="#btnVolverOnAction" prefHeight="38.0" prefWidth="153.0" style="-fx-background-color: #5686e7;" text="Volver al menu" textAlignment="CENTER" textFill="#fff6f6" AnchorPane.bottomAnchor="10.0">
          <font>
             <Font name="System Bold" size="15.0" />

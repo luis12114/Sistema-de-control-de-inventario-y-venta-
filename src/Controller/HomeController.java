@@ -46,10 +46,6 @@ public class HomeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         this.usuarioDao = new UsuarioDao();
-
-        /*File file = new File("scr/Images/buyCard.png");
-        Image image = new Image(file.toURI().toString());
-        ImageLogo.setImage(image);*/
     }
 
     /*Boton de login*/
