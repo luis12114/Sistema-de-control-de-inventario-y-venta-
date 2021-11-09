@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ProductosDao {
 
-     private ConnectionMsql fabricaConexion;
+    private ConnectionMsql fabricaConexion;
 
     public ProductosDao() {
         this.fabricaConexion = new ConnectionMsql();

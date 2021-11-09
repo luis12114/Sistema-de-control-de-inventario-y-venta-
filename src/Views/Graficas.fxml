@@ -17,36 +17,35 @@
                   <Font name="System Bold" size="31.0" />
                </font>
             </Text>
-            <DatePicker layoutX="17.0" layoutY="298.0" prefHeight="31.0" prefWidth="268.0" style="-fx-background-color: white;" />
-            <Text fill="WHITE" layoutX="21.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de inicio">
+            <DatePicker fx:id="dateFechaInicio" layoutX="17.0" layoutY="244.0" prefHeight="31.0" prefWidth="268.0" style="-fx-background-color: white;" />
+            <Text fill="WHITE" layoutX="21.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de inicio">
                <font>
                   <Font name="System Bold" size="21.0" />
                </font>
             </Text>
-            <DatePicker layoutX="17.0" layoutY="397.0" prefHeight="31.0" prefWidth="268.0" style="-fx-background-color: white;" />
-            <Text fill="WHITE" layoutX="21.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de inicio">
+            <DatePicker fx:id="dateFechaFin" layoutX="17.0" layoutY="343.0" prefHeight="31.0" prefWidth="268.0" style="-fx-background-color: white;" />
+            <Text fx:id="dataFechaFin" fill="WHITE" layoutX="21.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de fin">
                <font>
                   <Font name="System Bold" size="21.0" />
                </font>
             </Text>
-            <ComboBox layoutX="17.0" layoutY="199.0" prefHeight="25.0" prefWidth="268.0" style="-fx-background-color: white;" />
-            <Text fill="WHITE" layoutX="21.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria">
+            <ComboBox fx:id="CMBProductos" layoutX="18.0" layoutY="139.0" prefHeight="25.0" prefWidth="268.0" style="-fx-background-color: white;" />
+            <Text fill="WHITE" layoutX="16.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Producto">
                <font>
                   <Font name="System Bold" size="21.0" />
                </font>
             </Text>
-            <ComboBox layoutX="16.0" layoutY="113.0" prefHeight="25.0" prefWidth="268.0" style="-fx-background-color: white;" />
-            <Text fill="WHITE" layoutX="14.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Producto">
-               <font>
-                  <Font name="System Bold" size="21.0" />
-               </font>
-            </Text>
-            <Button layoutX="167.0" layoutY="468.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="118.0" style="-fx-background-color: red;" text="Cancelar" textFill="WHITE">
+            <Button layoutX="53.0" layoutY="495.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="192.0" style="-fx-background-color: red;" text="Limpiar" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
-            <Button layoutX="24.0" layoutY="468.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="118.0" style="-fx-background-color: white;" text="Graficar" textFill="#5686e7">
+            <Button fx:id="btnGraficar" layoutX="20.0" layoutY="426.0" mnemonicParsing="false" onAction="#btnGraficarOnAction" prefHeight="35.0" prefWidth="118.0" style="-fx-background-color: white;" text="Graficar" textFill="#5686e7">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="152.0" layoutY="426.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="137.0" style="-fx-background-color: white;" text="Crear Reporte" textFill="#5686e7">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
