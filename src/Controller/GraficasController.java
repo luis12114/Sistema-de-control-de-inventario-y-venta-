@@ -81,7 +81,7 @@ public class GraficasController extends ConnectionMsql implements Initializable 
             documento.add(parrafo);
             
             this.ConnectionMsql();
-            String SQL = "SELECT * FROM ventas_p";
+            String SQL = "SELECT * FROM ventas_p ";
             PreparedStatement sentencia = this.getCon().prepareStatement(SQL);
             res = sentencia.executeQuery();
             while (res.next()) {
@@ -135,7 +135,7 @@ public class GraficasController extends ConnectionMsql implements Initializable 
         pieChartData = FXCollections.observableArrayList();
         try {
             this.ConnectionMsql();
-            String SQL = "SELECT * FROM ventas_p";
+            String SQL = "SELECT * FROM ventas_p GROUP BY NombreProducto";
             PreparedStatement sentencia = this.getCon().prepareStatement(SQL);
             res = sentencia.executeQuery();
             while (res.next()) {
